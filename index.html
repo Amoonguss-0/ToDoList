@@ -10,18 +10,23 @@
 </head>
 <body>
     <h1>To Do List</h1>
+    <div id="error"></div>
 
     <form>
-        <label for="title">Title:</label>
-        <input type="text" id="title">
-        <span id="title-span">*</span>
+        <label for="task">Task:</label>
+        <input type="text" id="task">
+        <span id="task-span"></span>
         <br>
 
-        <label for="date">Date:</label>
-        <input type="text" id="date">
+        <label for="due-date">Date:</label>
+        <input type="text" id="due-date">
         <br>
 
-        <input type="button" value="Add ToDo Item">
+        <input type="button" value="Add ToDo Item" id="button">
+        <br>
+
+        <div id="display"></div>
+        
 
         <script src="https://unpkg.com/js-datepicker"></script>
         <script src="js/main.js"></script>
