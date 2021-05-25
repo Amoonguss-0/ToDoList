@@ -20,9 +20,13 @@ function createList() {
 function displayList(myList) {
     var displayDiv = document.getElementById("display");
     var displayTask = document.createElement("h2");
+    displayTask.id = "unfinished";
     displayTask.innerText = myList.task;
     var displayDate = document.createElement("p");
+    displayDate.id = "unfinished";
     displayDate.innerText = myList.dueDate.toDateString();
+    displayTask.onclick = displayTask.remove;
+    displayDate.onclick = displayDate.remove;
     displayDiv.appendChild(displayTask);
     displayDiv.appendChild(displayDate);
 }

@@ -29,11 +29,16 @@ function displayList(myList:ToDoList):void{
 
     // Creates the task 
     let displayTask = document.createElement("h2");
+    displayTask.id = "unfinished";
     displayTask.innerText = myList.task;
 
     // Shows the due Date
     let displayDate = document.createElement("p");
+    displayDate.id = "unfinished";
     displayDate.innerText = myList.dueDate.toDateString();
+
+    displayTask.onclick = displayTask.remove;
+    displayDate.onclick = displayDate.remove;
 
     displayDiv.appendChild(displayTask);
     displayDiv.appendChild(displayDate);
@@ -58,5 +63,3 @@ function allDataValid():boolean{
 
     return true;
 }
-
-//make a delete for completed tasks
