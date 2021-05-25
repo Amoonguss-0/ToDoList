@@ -27,21 +27,22 @@ function createList():ToDoList{
 function displayList(myList:ToDoList):void{
     let displayDiv = document.getElementById("display");
 
+    let display = document.createElement("div")
+    display.id = "unfinished"
     // Creates the task 
     let displayTask = document.createElement("h2");
-    displayTask.id = "unfinished";
     displayTask.innerText = myList.task;
 
     // Shows the due Date
     let displayDate = document.createElement("p");
-    displayDate.id = "unfinished";
     displayDate.innerText = myList.dueDate.toDateString();
 
-    displayTask.onclick = displayTask.remove;
-    displayDate.onclick = displayDate.remove;
+    display.onclick = display.remove;
 
-    displayDiv.appendChild(displayTask);
-    displayDiv.appendChild(displayDate);
+    displayDiv.appendChild(display);
+
+    display.appendChild(displayTask);
+    display.appendChild(displayDate);
 }
 
 function addList(){

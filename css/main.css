@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    border: black 1px solid;
+    height: auto;
+    width: 600px;
+    margin-left: 35%;
+}
+
+#unfinished:hover{
+    color: red;
+    border: red solid 1px;
+}
+
+#unfinished{
+    border: solid 1px black;
+}
